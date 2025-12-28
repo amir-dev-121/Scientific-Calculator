@@ -48,7 +48,7 @@ body{
 }
 
 .logo{
-  width:100px;
+  width:90px;
 }
 
 .title.center{
@@ -62,7 +62,7 @@ body{
 }
 
 body.dark .title h1{
-  color:#fff;
+  color:#ffffff;
 }
 
 .title p{
@@ -78,16 +78,12 @@ body.dark .title p{
 .history-btn{
   width:70px;
   height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:40px;
+  font-size:38px;
   background:none;
   border:none;
   cursor:pointer;
   border-radius:10px;
 }
-
 
 /* DISPLAY */
 .display{
@@ -142,7 +138,7 @@ button:hover{
   color:#fff;
 }
 
-/* TOGGLE */
+/* THEME TOGGLE */
 .theme-toggle{
   margin-top:14px;
   display:flex;
@@ -154,7 +150,6 @@ button:hover{
 .theme-toggle span{
   font-size:13px;
   opacity:.4;
-  font-weight:400;
 }
 
 .theme-toggle .active{
@@ -215,10 +210,10 @@ input:checked + .slider::before{
 }
 
 .history-box{
-  background:#fff;
+  background:#ffffff;
   padding:22px;
   border-radius:16px;
-  width:420px;                 /* ✅ wider */
+  width:420px;
   max-width:90%;
 }
 
@@ -233,7 +228,7 @@ input:checked + .slider::before{
 }
 
 #historyList li{
-  white-space:nowrap;          /* ✅ single line */
+  white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
   margin-bottom:6px;
@@ -246,6 +241,20 @@ input:checked + .slider::before{
   gap:10px;
 }
 
+/* HISTORY DARK MODE */
+body.dark .history-box{
+  background:#1e293b;
+  color:#ffffff;
+}
+
+body.dark .history-box h2{
+  color:#ffffff;
+}
+
+body.dark #historyList li{
+  color:#e5e7eb;
+}
+
 /* MOBILE */
 @media(max-width:480px){
   .calculator{
@@ -253,97 +262,14 @@ input:checked + .slider::before{
   }
 }
 
-
 /* =========================
-   HISTORY POPUP – DARK MODE
-   ========================= */
-
-body.dark .history-modal{
-  background:#1e293b;          /* same dark card tone */
-  color:#ffffff;
-  box-shadow:0 25px 60px rgba(0,0,0,0.6);
-}
-
-body.dark .history-modal h2{
-  color:#ffffff;               /* heading white */
-}
-
-body.dark .history-modal ul li{
-  color:#e5e7eb;               /* readable light text */
-}
-
-/* Buttons */
-body.dark .history-modal button{
-  background:#0b4dbb;          /* brand primary */
-  color:#ffffff;
-  border:none;
-}
-
-body.dark .history-modal button:hover{
-  background:#ffb200;          /* brand secondary */
-  color:#000;
-}
-
-
-
-/* =========================
-   HISTORY POPUP FIX (SAFE)
+   SEO HIDDEN SECTION
 ========================= */
-
-/* popup overlay */
-.history-popup {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-/* popup box */
-.history-box {
-  background: #ffffff;
-  color: #000000;
-  max-width: 420px;
-  width: 90%;
-}
-
-/* heading */
-.history-box h2 {
-  color: var(--primary);
-  text-align: center;
-}
-
-/* history list */
-.history-box li {
-  color: #000;
-  white-space: nowrap;
-}
-
-/* DARK MODE FIX */
-body.dark .history-box {
-  background: #1e293b;
-  color: #ffffff;
-}
-
-body.dark .history-box h2 {
-  color: #ffffff;
-}
-
-body.dark .history-box li {
-  color: #e5e7eb;
-}
-
-/* buttons */
-.history-actions button {
-  background: var(--primary);
-  color: #ffffff;
-}
-
-.history-actions button:hover {
-  background: var(--secondary);
-  color: #000;
-}
-
-
-
-.seo-text{
-  font-size:0;
-  height:0;
+.seo-section{
+  position:absolute;
+  left:-9999px;
+  top:auto;
+  width:1px;
+  height:1px;
   overflow:hidden;
 }
