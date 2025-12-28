@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>Scientific Calculator Online – Free Advanced Calculator | Web Wave Studio</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Free online scientific calculator with trigonometry, logarithms, degree & radian mode, history, dark mode and advanced math functions. Built by Web Wave Studio.">
+
+<meta name="keywords" content="scientific calculator online, free scientific calculator, trigonometric calculator, sin cos tan calculator, log ln calculator, degree radian calculator, advanced math calculator, online calculator">
+
+<meta name="author" content="Web Wave Studio">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Scientific Calculator – Free Advanced Online Calculator">
+<meta property="og:description" content="Use this free scientific calculator with trigonometric, logarithmic, degree/radian, history and dark mode features.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.webp">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Scientific Calculator Online">
+<meta name="twitter:description" content="Advanced scientific calculator with sin, cos, tan, log, ln and degree/radian support.">
+
+<link rel="icon" href="logo.webp">
+<link rel="stylesheet" href="style.css">
+
+<!-- Math Engine -->
+<script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.0/lib/browser/math.js"></script>
+
+<!-- SCHEMA: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Scientific Calculator",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "All",
+  "description": "A free scientific calculator with advanced math, trigonometry, degree and radian modes.",
+  "author": {
+    "@type": "Organization",
+    "name": "Web Wave Studio"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<!-- FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this scientific calculator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this is a completely free online scientific calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator support degree and radian mode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can switch between degree and radian modes using the DEG/RAD button."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate sin, cos, tan and logarithms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this calculator supports trigonometric functions, logarithms, powers and advanced math."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="page">
+  <div class="calculator">
+
+    <!-- HEADER -->
+    <div class="header">
+      <img src="logo.webp" class="logo">
+      <div class="title center">
+        <h1>Scientific Calculator</h1>
+        <p>Powered by Web Wave Studio</p>
+      </div>
+      <button class="history-btn" onclick="openHistory()">📜</button>
+    </div>
+
+    <!-- DISPLAY -->
+    <div class="display">
+      <div class="last-result" id="lastResult"></div>
+      <input id="display" readonly>
+    </div>
+
+    <!-- KEYS -->
+    <div class="keys">
+
+      <button onclick="clearAll()">AC</button>
+      <button onclick="backspace()">⌫</button>
+      <button id="shiftBtn" onclick="toggleShift()">SHIFT</button>
+      <button onclick="toggleDeg()" id="degBtn">DEG</button>
+
+      <button onclick="trig('sin')">sin</button>
+      <button onclick="trig('cos')">cos</button>
+      <button onclick="trig('tan')">tan</button>
+      <button onclick="insert('/')">÷</button>
+
+      <button onclick="insert('7')">7</button>
+      <button onclick="insert('8')">8</button>
+      <button onclick="insert('9')">9</button>
+      <button onclick="insert('*')">×</button>
+
+      <button onclick="insert('4')">4</button>
+      <button onclick="insert('5')">5</button>
+      <button onclick="insert('6')">6</button>
+      <button onclick="insert('-')">−</button>
+
+      <button onclick="insert('1')">1</button>
+      <button onclick="insert('2')">2</button>
+      <button onclick="insert('3')">3</button>
+      <button onclick="insert('+')">+</button>
+
+      <button onclick="insert('0')">0</button>
+      <button onclick="insert('.')">.</button>
+      <button onclick="insert('pi')">π</button>
+      <button onclick="insert('e')">e</button>
+
+      <button onclick="insert('(')">(</button>
+      <button onclick="insert(')')">)</button>
+      <button onclick="insert('^')">xʸ</button>
+      <button onclick="insert('%')">%</button>
+
+      <button onclick="insert('log10(')">log</button>
+      <button onclick="insert('ln(')">ln</button>
+      <button onclick="useAns()">ANS</button>
+      <button class="equals" onclick="calculate()">=</button>
+
+    </div>
+
+    <!-- THEME TOGGLE -->
+    <div class="theme-toggle">
+      <span id="lightLabel" class="active">Light</span>
+      <label class="switch">
+        <input type="checkbox" onchange="toggleTheme()">
+        <span class="slider"></span>
+      </label>
+      <span id="darkLabel">Dark</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- HISTORY POPUP -->
+<div class="history-popup" id="historyPopup">
+  <div class="history-box">
+    <h2>History</h2>
+    <ul id="historyList"></ul>
+    <div class="history-actions">
+      <button onclick="clearHistory()">Clear</button>
+      <button onclick="closeHistory()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- HIDDEN SEO TEXT -->
+<p class="seo-text">
+This free scientific calculator allows users to calculate trigonometric functions such as sine, cosine and tangent, logarithms, powers, and advanced mathematical expressions using degree and radian modes.
+</p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
