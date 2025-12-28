@@ -6,10 +6,11 @@
 <title>Scientific Calculator Online – Free Advanced Calculator | Web Wave Studio</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0048ac">
 
 <meta name="description" content="Free online scientific calculator with trigonometry, logarithms, degree & radian mode, history, dark mode and advanced math functions. Built by Web Wave Studio.">
 
-<meta name="keywords" content="scientific calculator online, free scientific calculator, trigonometric calculator, sin cos tan calculator, log ln calculator, degree radian calculator, advanced math calculator, online calculator">
+<meta name="keywords" content="scientific calculator online, free scientific calculator, trigonometric calculator, sin cos tan calculator, log ln calculator, degree radian calculator, advanced math calculator">
 
 <meta name="author" content="Web Wave Studio">
 
@@ -30,7 +31,7 @@
 <!-- Math Engine -->
 <script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.0/lib/browser/math.js"></script>
 
-<!-- SCHEMA: WebApplication -->
+<!-- WebApplication Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,7 +52,7 @@
 }
 </script>
 
-<!-- FAQ SCHEMA -->
+<!-- FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,7 +85,6 @@
   ]
 }
 </script>
-<meta name="google-site-verification" content="npavaDNEJBio8pG2mXecLAEW1MUiEviNCAz-iVYdz6s" />
 
 </head>
 
@@ -95,23 +95,22 @@
 
     <!-- HEADER -->
     <div class="header">
-      <img src="logo.webp" class="logo">
+      <img src="logo.webp" class="logo" alt="Web Wave Studio Logo">
       <div class="title center">
         <h1>Scientific Calculator</h1>
         <p>Powered by Web Wave Studio</p>
       </div>
-      <button class="history-btn" onclick="openHistory()">📜</button>
+      <button class="history-btn" onclick="openHistory()" aria-label="Open calculation history">📜</button>
     </div>
 
     <!-- DISPLAY -->
     <div class="display">
       <div class="last-result" id="lastResult"></div>
-      <input id="display" readonly>
+      <input id="display" readonly aria-label="Calculator display">
     </div>
 
     <!-- KEYS -->
     <div class="keys">
-
       <button onclick="clearAll()">AC</button>
       <button onclick="backspace()">⌫</button>
       <button id="shiftBtn" onclick="toggleShift()">SHIFT</button>
@@ -150,8 +149,7 @@
       <button onclick="insert('log10(')">log</button>
       <button onclick="insert('ln(')">ln</button>
       <button onclick="useAns()">ANS</button>
-      <button class="equals" onclick="calculate()">=</button>
-
+      <button class="equals" onclick="calculate()" aria-label="Calculate result">=</button>
     </div>
 
     <!-- THEME TOGGLE -->
@@ -179,13 +177,16 @@
   </div>
 </div>
 
-<!-- HIDDEN SEO TEXT -->
-<p class="seo-text">
-This free scientific calculator allows users to calculate trigonometric functions such as sine, cosine and tangent, logarithms, powers, and advanced mathematical expressions using degree and radian modes.
-</p>
+<!-- SEO HIDDEN CONTENT -->
+<section class="seo-section">
+  <h2>Advanced Scientific Calculator Online</h2>
+  <p>
+    This advanced scientific calculator allows users to calculate trigonometric
+    functions, logarithms, powers, and complex mathematical expressions using
+    degree or radian modes. It is free, fast, and works on all devices.
+  </p>
+</section>
 
 <script src="script.js"></script>
-
 </body>
 </html>
-
